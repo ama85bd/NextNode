@@ -1,0 +1,24 @@
+npm init
+
+npx tsc --init
+
+npm install express zod config cors express mongoose pino pino-pretty dayjs bcrypt jsonwebtoken lodash nanoid
+
+====================================
+npm i dotenv
+
+=== add top this two line at app.ts ===
+import dotenv from 'dotenv';
+dotenv.config();
+====================================
+
+
+npm install @types/body-parser @types/config @types/cors @types/express @types/node @types/pino @types/bcrypt @types/jsonwebtoken @types/lodash @types/nanoid ts-node-dev typescript -D
+
+
+========== For swagger configuration =========
+npm i swagger-jsdoc swagger-ui-express
+npm i --save-dev @types/swagger-jsdoc
+npm i --save-dev @types/swagger-ui-express
+-- to get version from package.json file
+ ->"resolveJsonModule": true
