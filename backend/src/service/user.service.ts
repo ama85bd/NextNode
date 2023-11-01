@@ -41,5 +41,6 @@ export async function findUserById(
   options: QueryOptions = { lean: true }
 ) {
   const userId = { _id: new ObjectId(query.userId) };
-  return UserModel.findOne(userId, {}, options);
+  const user = await UserModel.findOne(userId, {}, options);
+  return omit(user, 'password');
 }
